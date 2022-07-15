@@ -1,0 +1,199 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue254;\red144\green1\blue18;
+\red9\green60\blue148;\red19\green118\blue70;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99608;\cssrgb\c63922\c8235\c8235;
+\cssrgb\c1569\c31765\c64706;\cssrgb\c3529\c52549\c34510;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \{\cb1 \
+\cb3     \cf4 \strokec4 "$schema"\cf2 \strokec2 : \cf5 \strokec5 "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"\cf2 \strokec2 ,\cb1 \
+\cb3     \cf4 \strokec4 "contentVersion"\cf2 \strokec2 : \cf5 \strokec5 "1.0.0.0"\cf2 \strokec2 ,\cb1 \
+\cb3     \cf4 \strokec4 "parameters"\cf2 \strokec2 : \{\cb1 \
+\cb3         \cf4 \strokec4 "location"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "networkInterfaceName"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "networkSecurityGroupName"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "networkSecurityGroupRules"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "array"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "subnetName"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "virtualNetworkName"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "addressPrefixes"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "array"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "subnets"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "array"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "publicIpAddressName"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "publicIpAddressType"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "pipDeleteOption"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "virtualMachineName"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "virtualMachineComputerName"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "virtualMachineRG"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "osDiskType"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "osDiskDeleteOption"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "virtualMachineSize"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "nicDeleteOption"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \cf4 \strokec4 "adminUsername"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     \},\cb1 \
+\cb3     \cf4 \strokec4 "variables"\cf2 \strokec2 : \{\cb1 \
+\cb3         \cf4 \strokec4 "nsgId"\cf2 \strokec2 : \cf5 \strokec5 "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"\cf2 \strokec2 ,\cb1 \
+\cb3         \cf4 \strokec4 "vnetName"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('virtualNetworkName')]"\cf2 \strokec2 ,\cb1 \
+\cb3         \cf4 \strokec4 "vnetId"\cf2 \strokec2 : \cf5 \strokec5 "[resourceId(resourceGroup().name,'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]"\cf2 \strokec2 ,\cb1 \
+\cb3         \cf4 \strokec4 "subnetRef"\cf2 \strokec2 : \cf5 \strokec5 "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]"\cf2 \cb1 \strokec2 \
+\cb3     \},\cb1 \
+\cb3     \cf4 \strokec4 "resources"\cf2 \strokec2 : [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "name"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('networkInterfaceName')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "Microsoft.Network/networkInterfaces"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "apiVersion"\cf2 \strokec2 : \cf5 \strokec5 "2021-03-01"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "location"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('location')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "dependsOn"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf4 \strokec4 "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf4 \strokec4 "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf4 \strokec4 "[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "properties"\cf2 \strokec2 : \{\cb1 \
+\cb3                 \cf4 \strokec4 "ipConfigurations"\cf2 \strokec2 : [\cb1 \
+\cb3                     \{\cb1 \
+\cb3                         \cf4 \strokec4 "name"\cf2 \strokec2 : \cf5 \strokec5 "ipconfig1"\cf2 \strokec2 ,\cb1 \
+\cb3                         \cf4 \strokec4 "properties"\cf2 \strokec2 : \{\cb1 \
+\cb3                             \cf4 \strokec4 "subnet"\cf2 \strokec2 : \{\cb1 \
+\cb3                                 \cf4 \strokec4 "id"\cf2 \strokec2 : \cf5 \strokec5 "[variables('subnetRef')]"\cf2 \cb1 \strokec2 \
+\cb3                             \},\cb1 \
+\cb3                             \cf4 \strokec4 "privateIPAllocationMethod"\cf2 \strokec2 : \cf5 \strokec5 "Dynamic"\cf2 \strokec2 ,\cb1 \
+\cb3                             \cf4 \strokec4 "publicIpAddress"\cf2 \strokec2 : \{\cb1 \
+\cb3                                 \cf4 \strokec4 "id"\cf2 \strokec2 : \cf5 \strokec5 "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"\cf2 \strokec2 ,\cb1 \
+\cb3                                 \cf4 \strokec4 "properties"\cf2 \strokec2 : \{\cb1 \
+\cb3                                     \cf4 \strokec4 "deleteOption"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('pipDeleteOption')]"\cf2 \cb1 \strokec2 \
+\cb3                                 \}\cb1 \
+\cb3                             \}\cb1 \
+\cb3                         \}\cb1 \
+\cb3                     \}\cb1 \
+\cb3                 ],\cb1 \
+\cb3                 \cf4 \strokec4 "networkSecurityGroup"\cf2 \strokec2 : \{\cb1 \
+\cb3                     \cf4 \strokec4 "id"\cf2 \strokec2 : \cf5 \strokec5 "[variables('nsgId')]"\cf2 \cb1 \strokec2 \
+\cb3                 \}\cb1 \
+\cb3             \}\cb1 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "name"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('networkSecurityGroupName')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "Microsoft.Network/networkSecurityGroups"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "apiVersion"\cf2 \strokec2 : \cf5 \strokec5 "2019-02-01"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "location"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('location')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "properties"\cf2 \strokec2 : \{\cb1 \
+\cb3                 \cf4 \strokec4 "securityRules"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('networkSecurityGroupRules')]"\cf2 \cb1 \strokec2 \
+\cb3             \}\cb1 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "name"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('virtualNetworkName')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "Microsoft.Network/virtualNetworks"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "apiVersion"\cf2 \strokec2 : \cf5 \strokec5 "2020-11-01"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "location"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('location')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "properties"\cf2 \strokec2 : \{\cb1 \
+\cb3                 \cf4 \strokec4 "addressSpace"\cf2 \strokec2 : \{\cb1 \
+\cb3                     \cf4 \strokec4 "addressPrefixes"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('addressPrefixes')]"\cf2 \cb1 \strokec2 \
+\cb3                 \},\cb1 \
+\cb3                 \cf4 \strokec4 "subnets"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('subnets')]"\cf2 \cb1 \strokec2 \
+\cb3             \}\cb1 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "name"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('publicIpAddressName')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "Microsoft.Network/publicIpAddresses"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "apiVersion"\cf2 \strokec2 : \cf5 \strokec5 "2020-08-01"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "location"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('location')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "properties"\cf2 \strokec2 : \{\cb1 \
+\cb3                 \cf4 \strokec4 "publicIpAllocationMethod"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('publicIpAddressType')]"\cf2 \cb1 \strokec2 \
+\cb3             \}\cb1 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "name"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('virtualMachineName')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "Microsoft.Compute/virtualMachines"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "apiVersion"\cf2 \strokec2 : \cf5 \strokec5 "2022-03-01"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "location"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('location')]"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "dependsOn"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf4 \strokec4 "[concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "properties"\cf2 \strokec2 : \{\cb1 \
+\cb3                 \cf4 \strokec4 "hardwareProfile"\cf2 \strokec2 : \{\cb1 \
+\cb3                     \cf4 \strokec4 "vmSize"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('virtualMachineSize')]"\cf2 \cb1 \strokec2 \
+\cb3                 \},\cb1 \
+\cb3                 \cf4 \strokec4 "storageProfile"\cf2 \strokec2 : \{\cb1 \
+\cb3                     \cf4 \strokec4 "osDisk"\cf2 \strokec2 : \{\cb1 \
+\cb3                         \cf4 \strokec4 "createOption"\cf2 \strokec2 : \cf5 \strokec5 "fromImage"\cf2 \strokec2 ,\cb1 \
+\cb3                         \cf4 \strokec4 "managedDisk"\cf2 \strokec2 : \{\cb1 \
+\cb3                             \cf4 \strokec4 "storageAccountType"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('osDiskType')]"\cf2 \cb1 \strokec2 \
+\cb3                         \},\cb1 \
+\cb3                         \cf4 \strokec4 "diskSizeGB"\cf2 \strokec2 : \cf6 \strokec6 64\cf2 \strokec2 ,\cb1 \
+\cb3                         \cf4 \strokec4 "deleteOption"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('osDiskDeleteOption')]"\cf2 \cb1 \strokec2 \
+\cb3                     \},\cb1 \
+\cb3                     \cf4 \strokec4 "imageReference"\cf2 \strokec2 : \{\cb1 \
+\cb3                         \cf4 \strokec4 "publisher"\cf2 \strokec2 : \cf5 \strokec5 "canonical"\cf2 \strokec2 ,\cb1 \
+\cb3                         \cf4 \strokec4 "offer"\cf2 \strokec2 : \cf5 \strokec5 "UbuntuServer"\cf2 \strokec2 ,\cb1 \
+\cb3                         \cf4 \strokec4 "sku"\cf2 \strokec2 : \cf5 \strokec5 "14.04.5-LTS"\cf2 \strokec2 ,\cb1 \
+\cb3                         \cf4 \strokec4 "version"\cf2 \strokec2 : \cf5 \strokec5 "latest"\cf2 \cb1 \strokec2 \
+\cb3                     \}\cb1 \
+\cb3                 \},\cb1 \
+\cb3                 \cf4 \strokec4 "networkProfile"\cf2 \strokec2 : \{\cb1 \
+\cb3                     \cf4 \strokec4 "networkInterfaces"\cf2 \strokec2 : [\cb1 \
+\cb3                         \{\cb1 \
+\cb3                             \cf4 \strokec4 "id"\cf2 \strokec2 : \cf5 \strokec5 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaceName'))]"\cf2 \strokec2 ,\cb1 \
+\cb3                             \cf4 \strokec4 "properties"\cf2 \strokec2 : \{\cb1 \
+\cb3                                 \cf4 \strokec4 "deleteOption"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('nicDeleteOption')]"\cf2 \cb1 \strokec2 \
+\cb3                             \}\cb1 \
+\cb3                         \}\cb1 \
+\cb3                     ]\cb1 \
+\cb3                 \},\cb1 \
+\cb3                 \cf4 \strokec4 "osProfile"\cf2 \strokec2 : \{\cb1 \
+\cb3                     \cf4 \strokec4 "computerName"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('virtualMachineComputerName')]"\cf2 \strokec2 ,\cb1 \
+\cb3                     \cf4 \strokec4 "adminUsername"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('adminUsername')]"\cf2 \strokec2 ,\cb1 \
+\cb3                     \cf4 \strokec4 "linuxConfiguration"\cf2 \strokec2 : \{\cb1 \
+\cb3                         \cf4 \strokec4 "disablePasswordAuthentication"\cf2 \strokec2 : \cf5 \strokec5 true\cf2 \cb1 \strokec2 \
+\cb3                     \}\cb1 \
+\cb3                 \}\cb1 \
+\cb3             \}\cb1 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     \cf4 \strokec4 "outputs"\cf2 \strokec2 : \{\cb1 \
+\cb3         \cf4 \strokec4 "adminUsername"\cf2 \strokec2 : \{\cb1 \
+\cb3             \cf4 \strokec4 "type"\cf2 \strokec2 : \cf5 \strokec5 "string"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "value"\cf2 \strokec2 : \cf5 \strokec5 "[parameters('adminUsername')]"\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     \}\cb1 \
+\cb3 \}\cb1 \
+}
