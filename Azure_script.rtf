@@ -1,0 +1,48 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red124\green131\blue146;\red245\green246\blue249;\red0\green0\blue0;
+\red24\green25\blue27;\red65\green69\blue78;\red73\green49\blue222;}
+{\*\expandedcolortbl;;\cssrgb\c55686\c58824\c63922;\cssrgb\c96863\c97255\c98039;\cssrgb\c0\c0\c0;
+\cssrgb\c12157\c12941\c14118;\cssrgb\c32157\c34118\c38039;\cssrgb\c36078\c30588\c89804;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl336\partightenfactor0
+
+\f0\fs21\fsmilli10560 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 # We strongly recommend using the required_providers block to set the\cf4 \strokec4 \
+\cf2 \strokec2 # Azure Provider source and version being used\cf4 \strokec4 \
+\pard\pardeftab720\sl336\partightenfactor0
+\cf5 \strokec5 terraform\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4 \
+  \cf5 \strokec5 required_providers\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4 \
+    \cf6 \strokec6 azurerm\cf4 \strokec4  \cf5 \strokec5 =\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4 \
+      \cf6 \strokec6 source\cf4 \strokec4   \cf5 \strokec5 =\cf4 \strokec4  \cf7 \strokec7 "hashicorp/azurerm"\cf4 \strokec4 \
+      \cf6 \strokec6 version\cf4 \strokec4  \cf5 \strokec5 =\cf4 \strokec4  \cf7 \strokec7 "=3.0.0"\cf4 \strokec4 \
+    \cf5 \strokec5 \}\cf4 \strokec4 \
+  \cf5 \strokec5 \}\cf4 \strokec4 \
+\cf5 \strokec5 \}\cf4 \strokec4 \
+\
+\pard\pardeftab720\sl336\partightenfactor0
+\cf2 \strokec2 # Configure the Microsoft Azure Provider\cf4 \strokec4 \
+\pard\pardeftab720\sl336\partightenfactor0
+\cf5 \strokec5 provider\cf7 \strokec7  "azurerm" \cf5 \strokec5 \{\cf4 \strokec4 \
+  \cf5 \strokec5 features\cf4 \strokec4  \cf5 \strokec5 \{\}\cf4 \strokec4 \
+\cf5 \strokec5 \}\cf4 \strokec4 \
+\
+\pard\pardeftab720\sl336\partightenfactor0
+\cf2 \strokec2 # Create a resource group\cf4 \strokec4 \
+\pard\pardeftab720\sl336\partightenfactor0
+\cf5 \strokec5 resource \cf7 \strokec7 "azurerm_resource_group"\cf4 \strokec4  \cf7 \strokec7 "example"\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4 \
+  \cf6 \strokec6 name\cf4 \strokec4      \cf5 \strokec5 =\cf4 \strokec4  \cf7 \strokec7 "example-resources"\cf4 \strokec4 \
+  \cf6 \strokec6 location\cf4 \strokec4  \cf5 \strokec5 =\cf4 \strokec4  \cf7 \strokec7 "West Europe"\cf4 \strokec4 \
+\cf5 \strokec5 \}\cf4 \strokec4 \
+\
+\pard\pardeftab720\sl336\partightenfactor0
+\cf2 \strokec2 # Create a virtual network within the resource group\cf4 \strokec4 \
+\pard\pardeftab720\sl336\partightenfactor0
+\cf5 \strokec5 resource \cf7 \strokec7 "azurerm_virtual_network"\cf4 \strokec4  \cf7 \strokec7 "example"\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4 \
+  \cf6 \strokec6 name\cf4 \strokec4                 \cf5 \strokec5 =\cf4 \strokec4  \cf7 \strokec7 "example-network"\cf4 \strokec4 \
+  \cf6 \strokec6 resource_group_name\cf4 \strokec4  \cf5 \strokec5 =\cf4 \strokec4  azurerm_resource_group.example.name\
+  \cf6 \strokec6 location\cf4 \strokec4             \cf5 \strokec5 =\cf4 \strokec4  azurerm_resource_group.example.location\
+  \cf6 \strokec6 address_space\cf4 \strokec4        \cf5 \strokec5 =\cf4 \strokec4  \cf5 \strokec5 [\cf7 \strokec7 "10.0.0.0/16"\cf5 \strokec5 ]\cf4 \strokec4 \
+\cf5 \strokec5 \}\cf7 \strokec7 \
+}
